@@ -11,16 +11,20 @@ public class Ficohsa {
         prestamos.add(new Prestamo(3,"Alejandro",5000,0.1));
         
         for(Prestamo prem : prestamos){
+            prem.quienSoy();
             //obj instanceof Clase
+            
             if(prem instanceof PrestamoVivienda)
                 System.out.print("VIVIENDA ");            
-            else if(prem instanceof PrestamoAuto)
+            else if(prem instanceof PrestamoAuto){
+                ((PrestamoAuto)prem).setDescripcionAuto("Toyota Corolla");
                 System.out.print("AUTO ");
+            }
             else
                 System.out.print("PAPA ");
             
             System.out.println(prem);
-        }        
+        }
       
-    }    
+    }
 }

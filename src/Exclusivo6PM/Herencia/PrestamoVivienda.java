@@ -11,5 +11,15 @@ public class PrestamoVivienda extends Prestamo{
     public double getGastoCierre() {
         return gastoCierre;
     }  
+    
+    @Override
+    public void quienSoy(){
+        System.out.println("Soy de tipo Vivienda");
+    }
+    
+    @Override
+    public String toString(){
+        return super.toString() + ", Gasto de Cierre=" + gastoCierre;
+    }
         
 }
